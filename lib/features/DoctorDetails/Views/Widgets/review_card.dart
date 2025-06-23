@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:testtest/utils/constants.dart';
 
 class ReviewCard extends StatelessWidget {
   const ReviewCard({super.key});
@@ -26,9 +28,33 @@ class ReviewCard extends StatelessWidget {
                 children: [
                   Text(
                     "Emily Anderson",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: GoogleFonts.inter(
+                      fontWeight: FontWeight.bold,
+                      color: kboldTitle,
+                    ),
                   ),
-                  Text("Rating : 5.0"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "5.0",
+                        style: GoogleFonts.inter(
+                          color: kboldText,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(width: 4),
+                      Row(
+                        children: [
+                          Icon(Icons.star, color: Colors.orange),
+                          Icon(Icons.star, color: Colors.orange),
+                          Icon(Icons.star, color: Colors.orange),
+                          Icon(Icons.star, color: Colors.orange),
+                          Icon(Icons.star, color: Colors.orange),
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -37,6 +63,7 @@ class ReviewCard extends StatelessWidget {
         SizedBox(height: 8),
         Text(
           "Dr. Patel is a true professional who genuinely cares about his patients. I highly recommend Dr. Patel to anyone seeking exceptional cardiac care.",
+          style: TextStyle(color: kboldText),
         ),
       ],
     );

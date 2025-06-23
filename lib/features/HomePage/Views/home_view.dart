@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:testtest/features/HomePage/Data/Models/Category.dart';
 import 'package:testtest/features/HomePage/Views/Widgets/home_view_app_bar.dart';
 import 'package:testtest/utils/constants.dart';
@@ -43,7 +44,7 @@ class HomeView extends StatelessWidget {
                         children: [
                           Text(
                             "Categories",
-                            style: TextStyle(
+                            style: GoogleFonts.inter(
                               fontWeight: FontWeight.bold,
                               color: kboldTitle,
                               fontSize: 16,
@@ -79,7 +80,11 @@ class HomeView extends StatelessWidget {
                                 SizedBox(height: 8),
                                 Text(
                                   categoryClassList[index].categoryName,
-                                  style: TextStyle(fontSize: 12),
+                                  style: GoogleFonts.inter(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                    color: kboldText,
+                                  ),
                                 ),
                               ],
                             ),
@@ -94,10 +99,10 @@ class HomeView extends StatelessWidget {
                   children: [
                     Text(
                       "Nearby Medical Centers",
-                      style: TextStyle(
+                      style: GoogleFonts.inter(
                         fontWeight: FontWeight.bold,
                         color: kboldTitle,
-                        fontSize: 20,
+                        fontSize: 16,
                       ),
                     ),
                     Text("See all"),
@@ -214,7 +219,7 @@ class HomeCardContent extends StatelessWidget {
               children: [
                 Text(
                   "Looking for",
-                  style: TextStyle(
+                  style: GoogleFonts.inter(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
                     fontSize: 22,
@@ -223,7 +228,7 @@ class HomeCardContent extends StatelessWidget {
                 ),
                 Text(
                   "Specialist Doctors?",
-                  style: TextStyle(
+                  style: GoogleFonts.inter(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 22,
@@ -233,7 +238,7 @@ class HomeCardContent extends StatelessWidget {
                 const SizedBox(height: 30),
                 Text(
                   "Schedule your appointment \nwith the greatest doctors ever?",
-                  style: TextStyle(color: Colors.white, fontSize: 13),
+                  style: GoogleFonts.inter(color: Colors.white, fontSize: 13),
                   maxLines: 2,
                 ),
               ],

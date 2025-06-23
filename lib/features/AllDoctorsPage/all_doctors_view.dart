@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:testtest/features/AllDoctorsPage/Widgets/allTabs.dart';
 import 'package:testtest/features/DoctorDetails/Views/doctors_details_view.dart';
 import 'package:testtest/utils/constants.dart';
@@ -97,13 +98,13 @@ class SearchResultDoctorCard extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 4.0),
             child: Card(
-              elevation: 10.0,
+              elevation: 3.0,
               shadowColor: Colors.grey.shade100,
               color: Colors.white,
               child: Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 12.0,
-                  vertical: 8.0,
+                  horizontal: 6.0,
+                  vertical: 4.0,
                 ),
                 child: Row(
                   children: [
@@ -112,31 +113,28 @@ class SearchResultDoctorCard extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Dr.David Patel",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: kboldTitle,
-                                fontSize: kLargeTextSize,
-                              ),
-                            ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.favorite_outline),
-                            ),
-                          ],
-                        ),
+                        Text("Dr.David Patel", style: doctorCardStyle),
+
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 4.0,
+                              ),
+                              child: Container(
+                                height: 1,
+                                width:
+                                    197, // 👈 this makes it stretch horizontally
+                                color: knormalText,
+                              ),
+                            ),
+
                             Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 "Cardiologist",
-                                style: TextStyle(
+                                style: GoogleFonts.inter(
                                   fontWeight: FontWeight.bold,
                                   fontSize: kLargeTextSize,
                                   color: knormalText,
@@ -145,26 +143,43 @@ class SearchResultDoctorCard extends StatelessWidget {
                             ),
                             Align(
                               alignment: Alignment.centerLeft,
-                              child: Text("Cardiology Center, USA"),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(Icons.location_on_outlined),
+                                  Text(
+                                    "Cardiology Center, USA",
+                                    style: GoogleFonts.inter(color: kboldTitle),
+                                  ),
+                                ],
+                              ),
                             ),
-                            Row(
-                              children: [
-                                Row(
-                                  children: [
-                                    Icon(Icons.star, color: Colors.yellow),
-                                    Text(
-                                      "4.7",
-                                      style: TextStyle(color: knormalText),
-                                    ),
-                                  ],
-                                ),
-                                Divider(color: Colors.black),
-                                SizedBox(width: 5),
-                                Text(
-                                  "1,872 Review",
-                                  style: TextStyle(color: knormalText),
-                                ),
-                              ],
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Icon(Icons.star, color: Colors.orange),
+
+                                      Text("5"),
+                                    ],
+                                  ),
+                                  const SizedBox(width: 3),
+                                  SizedBox(
+                                    width: 1,
+                                    height: 20,
+                                    child: Container(color: kDarkTeal),
+                                  ),
+                                  const SizedBox(width: 3),
+
+                                  Text(
+                                    "1,887 Reviews",
+                                    style: GoogleFonts.inter(color: kboldTitle),
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),

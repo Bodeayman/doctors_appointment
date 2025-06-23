@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:testtest/utils/constants.dart';
 
 class HomeViewAppBar extends StatelessWidget {
@@ -26,10 +27,10 @@ class HomeViewAppBar extends StatelessWidget {
                 Icon(Icons.location_on, color: kboldTitle),
                 Text(
                   "Settle,USA",
-                  style: TextStyle(
-                    fontSize: 20,
+                  style: GoogleFonts.inter(
+                    fontSize: 14,
                     color: kboldTitle,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ],

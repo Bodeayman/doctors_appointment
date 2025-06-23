@@ -32,7 +32,7 @@ class DoctorDetailsBar extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Text("Patients"),
+                Text("Patients", style: TextStyle(color: kboldText)),
               ],
             ),
             Column(
@@ -53,7 +53,7 @@ class DoctorDetailsBar extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Text("Experience"),
+                Text("Experience", style: TextStyle(color: kboldText)),
               ],
             ),
             Column(
@@ -74,7 +74,7 @@ class DoctorDetailsBar extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Text("Rating"),
+                Text("Rating", style: TextStyle(color: kboldText)),
               ],
             ),
             Column(
@@ -95,7 +95,7 @@ class DoctorDetailsBar extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Text("Reviews"),
+                Text("Reviews", style: TextStyle(color: kboldText)),
               ],
             ),
           ],
