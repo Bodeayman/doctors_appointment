@@ -31,7 +31,7 @@ class SearchInputField extends StatelessWidget {
           contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           filled: true,
           hintText: "Search doctor...",
-          hintStyle: TextStyle(color: knormalText),
+          hintStyle: TextStyle(color: knormalTitle),
         ),
       ),
     );

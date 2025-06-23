@@ -28,10 +28,20 @@ class HomeView extends StatelessWidget {
                   width: 342,
                   height: 163,
                   child: PageView(
+                    physics: BouncingScrollPhysics(),
                     children: [
-                      HomeCardContent(),
-                      HomeCardContent(),
-                      HomeCardContent(),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: HomeCardContent(),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: HomeCardContent(),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: HomeCardContent(),
+                      ),
                     ],
                   ),
                 ),
@@ -50,7 +60,10 @@ class HomeView extends StatelessWidget {
                               fontSize: 16,
                             ),
                           ),
-                          Text("See all"),
+                          Text(
+                            "See all",
+                            style: GoogleFonts.inter(color: kboldText),
+                          ),
                         ],
                       ),
                       SizedBox(height: 10),
@@ -105,7 +118,7 @@ class HomeView extends StatelessWidget {
                         fontSize: 16,
                       ),
                     ),
-                    Text("See all"),
+                    Text("See all", style: GoogleFonts.inter(color: kboldText)),
                   ],
                 ),
                 SizedBox(height: 10),
@@ -127,7 +140,12 @@ class HomeView extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: SizedBox(
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            border: Border.fromBorderSide(
+              BorderSide(color: Colors.grey.shade100),
+            ),
+          ),
           height: 76,
           child: Column(
             children: [
@@ -187,7 +205,7 @@ class CareCenterCard extends StatelessWidget {
               child: Text(
                 "Sunrise Health Care",
                 textAlign: TextAlign.start,
-                style: TextStyle(
+                style: GoogleFonts.inter(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: kboldTitle,
@@ -221,7 +239,7 @@ class HomeCardContent extends StatelessWidget {
                   "Looking for",
                   style: GoogleFonts.inter(
                     color: Colors.white,
-                    fontWeight: FontWeight.w900,
+                    fontWeight: FontWeight.bold,
                     fontSize: 22,
                   ),
                   maxLines: 2,
